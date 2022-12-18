@@ -1,5 +1,5 @@
 import classes from './MealItem.module.css';
-
+import MealItemForm from './meals-Item-Form/MealsItemForm';
 const MealItem = ({ name, description, price }) => {
     const prices = `$${price.toFixed(2)}`;
     return (
@@ -9,7 +9,9 @@ const MealItem = ({ name, description, price }) => {
                 <div className={classes.description}>{description}</div>
                 <div className={classes.price}>{prices}</div>
             </div>
-            <div></div>
+            <div>
+                <MealItemForm />
+            </div>
         </li>
     )
 };
